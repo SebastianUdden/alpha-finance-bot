@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import { StockProps } from "../../molecules/stock/Stock";
+import { IStock } from "../../molecules/stock/Stock";
 import Page from "../../organisms/page/Page";
 import Stocks from "../../organisms/stocks/Stocks";
 
-interface Props {
+export interface IStocksPage {
   title: string;
-  stocks: StockProps[];
+  stocks: IStock[];
 }
 
-const StocksPage = ({ title, stocks }: Props) => {
+const StocksPage = ({ title, stocks }: IStocksPage) => {
   return (
     <Page>
       <Wrapper>
         {title && <Title>{title}</Title>}
-        <Stocks title="Stocks" stocks={stocks} />
+        <Stocks title={title} stocks={stocks} />
         {/* <Transactions
           values={transactions}
           selected={selectedValue}

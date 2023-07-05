@@ -5,7 +5,7 @@ import { createColors } from "../../utils";
 import { useState } from "react";
 import SelectedValue from "../../molecules/selected-value/SelectedValue";
 import { ValueProps } from "../../molecules/value/Value";
-import { TransactionsProps } from "../../organisms/transactions/Transactions";
+import { ITransactions } from "../../organisms/transactions/Transactions";
 import { ONE_DAY } from "../../time";
 
 interface GetFieldsProps extends ValueProps {
@@ -36,7 +36,7 @@ const sortByDate = (a: any, b: any) => {
 
 interface Props {
   selected?: ValueProps;
-  bills: TransactionsProps;
+  bills: ITransactions;
 }
 
 const BillsPage = ({ selected, bills }: Props) => {

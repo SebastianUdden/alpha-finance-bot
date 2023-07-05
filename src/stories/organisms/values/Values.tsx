@@ -5,13 +5,13 @@ import Value, { ValueProps } from "../../molecules/value/Value";
 import { formatCurrency } from "../../utils";
 import Banner from "../../molecules/banner/Banner";
 
-export interface ValuesProps {
+export interface IValues {
   showLarge?: boolean;
   title?: string;
   values: ValueProps[];
 }
 
-interface Props extends ValuesProps {
+interface Props extends IValues {
   colors: string[];
   selected?: ValueProps;
   onShowPage?: (title?: string) => void;

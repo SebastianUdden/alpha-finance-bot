@@ -42,7 +42,7 @@ const DummyInputVisual = styled.div`
   width: 19px;
   height: 19px;
   border-radius: 3px;
-  border: ${(p) => `1px solid ${p.theme.colors.borderDark}`};
+  border: ${(p) => `1px solid ${p.theme.colors.fadedGrey}`};
   transition: background-color 150ms ease;
   display: flex;
   justify-content: center;

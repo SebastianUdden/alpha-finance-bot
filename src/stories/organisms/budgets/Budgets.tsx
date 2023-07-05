@@ -5,12 +5,12 @@ import PieChart from "../../molecules/pie-chart/PieChart";
 import { formatCurrency } from "../../utils";
 import Banner from "../../molecules/banner/Banner";
 
-export interface BudgetsProps {
+export interface IBudgets {
   showLarge?: boolean;
   title?: string;
   budgets: BudgetProps[];
 }
-interface Props extends BudgetsProps {
+interface Props extends IBudgets {
   colors: string[];
   selected?: BudgetProps;
   onShowPage?: (title?: string) => void;

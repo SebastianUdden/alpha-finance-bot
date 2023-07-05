@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { useState } from "react";
 import Stocks from "./Stocks";
+import { IStock } from "../../molecules/stock/Stock";
 
 export default {
   title: "Organisms/Stocks",
@@ -9,9 +10,13 @@ export default {
 } as ComponentMeta<typeof Stocks>;
 
 const Template: ComponentStory<typeof Stocks> = (args) => {
-  const [selected, setSelected] = useState(args.stocks[0]);
+  // const [selected, setSelected] = useState(args.stocks[0]);
   return (
-    <Stocks {...args} selected={selected} onSelect={(s) => setSelected(s)} />
+    <Stocks
+      {...args}
+      // selected={selected}
+      // onSelect={(s: IStock) => setSelected(s)}
+    />
   );
 };
 

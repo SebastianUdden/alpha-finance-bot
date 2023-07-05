@@ -241,7 +241,7 @@ Default.args = {
       },
     ],
   },
-  stocks: [],
+  stocks: { title: "Stocks", stocks: [] },
 };
 
 export const MockData = Template.bind({});

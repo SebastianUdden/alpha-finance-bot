@@ -17,27 +17,41 @@ Default.args = {
   stocks: [
     {
       company: "Avanza",
-      showPercentage: true,
       dailyPrices: [
         {
           date: "2023-04-04",
-          price: 170,
+          open: 170,
+          low: 150,
+          high: 175,
+          close: 155,
         },
         {
           date: "2023-04-04",
-          price: 140,
+          open: 170,
+          low: 150,
+          high: 175,
+          close: 155,
         },
         {
           date: "2023-04-04",
-          price: 150,
+          open: 170,
+          low: 150,
+          high: 175,
+          close: 155,
         },
         {
           date: "2023-04-03",
-          price: 110,
+          open: 170,
+          low: 150,
+          high: 175,
+          close: 155,
         },
         {
           date: "2023-04-02",
-          price: 100,
+          open: 170,
+          low: 150,
+          high: 175,
+          close: 155,
         },
       ],
       description: "Online banking, made easy!",

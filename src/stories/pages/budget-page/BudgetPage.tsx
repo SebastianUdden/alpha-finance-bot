@@ -1,6 +1,6 @@
 import Page from "../../organisms/page/Page";
 import styled, { useTheme } from "styled-components";
-import Budgets, { BudgetsProps } from "../../organisms/budgets/Budgets";
+import Budgets, { IBudgets } from "../../organisms/budgets/Budgets";
 import { createColors } from "../../utils";
 import { BudgetProps } from "../../molecules/budget/Budget";
 import { useState } from "react";
@@ -36,7 +36,7 @@ const getFields = (selected: BudgetProps) => {
 
 interface Props {
   selected?: BudgetProps;
-  budgets: BudgetsProps;
+  budgets: IBudgets;
 }
 
 const BudgetPage = ({ selected, budgets }: Props) => {

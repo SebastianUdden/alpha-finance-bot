@@ -1,23 +1,34 @@
+import { IBudgets } from "../stories/organisms/budgets/Budgets";
+import { ITransactions } from "../stories/organisms/transactions/Transactions";
+import { IValues } from "../stories/organisms/values/Values";
+import { IStocksPage } from "../stories/pages/stocks-page/StocksPage";
 import { uuidv4 } from "../stories/utils";
 import { MOCK_ACCOUNTS } from "./parts/mock-accounts";
 import { MOCK_BILLS } from "./parts/mock-bills";
 import { MOCK_BUDGETS } from "./parts/mock-budgets";
 
-export const MOCK_DATA = {
+interface IDATA_SET {
+  accounts: IValues;
+  bills: ITransactions;
+  budgets: IBudgets;
+  stocks: IStocksPage;
+}
+
+export const MOCK_DATA: IDATA_SET = {
   accounts: { title: "Accounts", values: MOCK_ACCOUNTS },
   bills: { title: "Bills", values: MOCK_BILLS },
   budgets: { title: "Budgets", showLarge: false, budgets: MOCK_BUDGETS },
-  stocks: [],
+  stocks: { title: "Stocks", stocks: [] },
 };
 
-export const MOCK_DATA_INITIAL = {
+export const MOCK_DATA_INITIAL: IDATA_SET = {
   accounts: { title: "Accounts", values: [] },
   bills: { title: "Bills", values: [] },
   budgets: { title: "Budgets", showLarge: false, budgets: [] },
-  stocks: [],
+  stocks: { title: "Stocks", stocks: [] },
 };
 
-export const MOCK_DATA_ONE_ACCOUNT = {
+export const MOCK_DATA_ONE_ACCOUNT: IDATA_SET = {
   accounts: {
     title: "Accounts",
     values: [
@@ -63,5 +74,5 @@ export const MOCK_DATA_ONE_ACCOUNT = {
   },
   bills: { title: "Bills", values: [] },
   budgets: { title: "Budgets", showLarge: false, budgets: [] },
-  stocks: [],
+  stocks: { title: "Stocks", stocks: [] },
 };

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import Banner from "../../molecules/banner/Banner";
-import Stock, { StockProps } from "../../molecules/stock/Stock";
+import Stock, { IStock } from "../../molecules/stock/Stock";
 
 interface Props {
   title: string;
-  stocks: StockProps[];
+  stocks: IStock[];
 }
 
 const Stocks = ({ title, stocks }: Props) => {

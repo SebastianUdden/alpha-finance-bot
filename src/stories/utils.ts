@@ -28,13 +28,13 @@ export const getPercentageHex = (ratio: number) => {
 
 export const getConicGradient = (colors: string[], ratios: number[]) => {
   const gradients: any = ratios.reduce(
-    (a, b) => {
+    (a: any, b: any) => {
       return { sum: a.sum + b, list: [...a.list, [a.sum, a.sum + b]] };
     },
     { sum: 0, list: [] }
   );
   const conicGradients = gradients.list
-    .map((x, i) => {
+    .map((x: any, i: number) => {
       return `${colors[i]} ${x[0] * 100}%${
         i === ratios.length - 1 ? "" : ` ${x[1] * 100}%`
       }`;

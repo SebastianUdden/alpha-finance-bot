@@ -14,7 +14,7 @@ interface PriceDate extends Price {
   date: string | Date;
 }
 
-export interface StockProps {
+export interface IStock {
   ticker: string;
   dailyPrices: PriceDate[];
   company: string;
@@ -30,7 +30,7 @@ const Stock = ({
   description,
   market,
   showCandles,
-}: StockProps) => {
+}: IStock) => {
   const [showPercentage, setShowPercentage] = useState(false);
   return (
     <Wrapper onClick={() => setShowPercentage(!showPercentage)}>

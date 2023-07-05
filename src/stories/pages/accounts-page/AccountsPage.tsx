@@ -1,4 +1,4 @@
-import Values, { ValuesProps } from "../../organisms/values/Values";
+import Values, { IValues } from "../../organisms/values/Values";
 import Page from "../../organisms/page/Page";
 import styled, { useTheme } from "styled-components";
 import { createColors } from "../../utils";
@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 export interface AccountsPageProps {
   selected?: ValueProps;
-  values: ValuesProps;
+  values: IValues;
   openAccountPage?: (account: ValueProps) => void;
 }
 

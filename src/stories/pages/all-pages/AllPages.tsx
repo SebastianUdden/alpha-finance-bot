@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { BudgetsProps } from "../../organisms/budgets/Budgets";
+import { IBudgets } from "../../organisms/budgets/Budgets";
 import Header, { HEADER_WIDTH, Tab } from "../../organisms/header/Header";
-import { ValuesProps } from "../../organisms/values/Values";
+import { IValues } from "../../organisms/values/Values";
 import AccountsPage from "../accounts-page/AccountsPage";
 import BillsPage from "../bills-page/BillsPage";
 import BudgetPage from "../budget-page/BudgetPage";
@@ -12,16 +12,15 @@ import OverviewPage from "../overview-page/OverviewPage";
 import { ValueProps } from "../../molecules/value/Value";
 import { TABS } from "./tabs";
 import { alertCalculation } from "../../organisms/alerts/calculations/alert-calculations";
-import { TransactionsProps } from "../../organisms/transactions/Transactions";
-import StocksPage from "../stocks-page/StocksPage";
-import { StockProps } from "../../molecules/stock/Stock";
+import { ITransactions } from "../../organisms/transactions/Transactions";
+import StocksPage, { IStocksPage } from "../stocks-page/StocksPage";
 
 interface Props {
-  accounts: ValuesProps;
-  bills: TransactionsProps;
-  budgets: BudgetsProps;
+  accounts: IValues;
+  bills: ITransactions;
+  budgets: IBudgets;
   transactions: AccountPageProps;
-  stocks: StockProps[];
+  stocks: IStocksPage;
 }
 
 const AllPages = ({ accounts, bills, budgets, stocks }: Props) => {
@@ -109,9 +108,7 @@ const AllPages = ({ accounts, bills, budgets, stocks }: Props) => {
           transactions={selectedAccount.transactions || []}
         />
       )}
-      {selectedTab.text === "Stocks" && (
-        <StocksPage title="Stocks" stocks={stocks} />
-      )}
+      {selectedTab.text === "Stocks" && <StocksPage {...stocks} />}
       {selectedTab.text === "Login" && <LoginPage />}
     </Grid>
   );

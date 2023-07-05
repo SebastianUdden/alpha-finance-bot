@@ -1,18 +1,18 @@
 import styled, { useTheme } from "styled-components";
 import Page from "../../organisms/page/Page";
 import Alerts, { AlertsProps } from "../../organisms/alerts/Alerts";
-import Budgets, { BudgetsProps } from "../../organisms/budgets/Budgets";
-import Values, { ValuesProps } from "../../organisms/values/Values";
+import Budgets, { IBudgets } from "../../organisms/budgets/Budgets";
+import Values, { IValues } from "../../organisms/values/Values";
 import { createColors } from "../../utils";
 import { ValueProps } from "../../molecules/value/Value";
 import { BudgetProps } from "../../molecules/budget/Budget";
-import { TransactionsProps } from "../../organisms/transactions/Transactions";
+import { ITransactions } from "../../organisms/transactions/Transactions";
 
 export interface OverviewPageProps {
   alerts: AlertsProps;
-  accounts: ValuesProps;
-  bills: TransactionsProps;
-  budgets: BudgetsProps;
+  accounts: IValues;
+  bills: ITransactions;
+  budgets: IBudgets;
   onSelectItem?: (item?: ValueProps | BudgetProps) => void;
   onShowPage?: (title?: string) => void;
 }

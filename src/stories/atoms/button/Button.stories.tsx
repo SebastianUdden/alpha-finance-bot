@@ -22,7 +22,7 @@ const Dark = styled.div`
   margin-top: 10px;
   padding: 20px;
   border-radius: 6px;
-  background-color: ${(p) => p.theme.colors.black};
+  background-color: ${(p) => p.theme.colors.interactiveDarkGrey};
 `;
 
 const examples = (darkMode: boolean) => (

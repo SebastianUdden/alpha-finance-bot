@@ -17,16 +17,19 @@ Default.args = {
   title: "Transactions",
   values: [
     {
+      id: "1",
       title: "Poke bowl",
       date: "2022-06-12",
       value: -143.5,
     },
     {
+      id: "2",
       title: "Alphadev Payroll",
       date: "2021-06-15",
       value: 42000,
     },
     {
+      id: "3",
       title: "Hamburger",
       date: "2022-06-13",
       value: -160,

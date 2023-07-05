@@ -1,6 +1,7 @@
+import { ValueProps } from "../../stories/molecules/value/Value";
 import { uuidv4 } from "../../stories/utils";
 
-export const MOCK_ACCOUNTS = [
+export const MOCK_ACCOUNTS: ValueProps[] = [
   {
     id: uuidv4(),
     title: "Salary account",
@@ -125,20 +126,26 @@ export const MOCK_ACCOUNTS = [
     title: "Vacations",
     text: "000000001234",
     value: 987.48,
-    transactions: [{ title: "Setup account", date: "2021-06-10", value: 0 }],
+    transactions: [
+      { id: "1", title: "Setup account", date: "2021-06-10", value: 0 },
+    ],
   },
   {
     id: uuidv4(),
     title: "Home savings",
     text: "000000001234",
     value: 0,
-    transactions: [{ title: "Setup account", date: "2021-06-10", value: 0 }],
+    transactions: [
+      { id: "2", title: "Setup account", date: "2021-06-10", value: 0 },
+    ],
   },
   {
     id: uuidv4(),
     title: "Moonshot",
     text: "0234000001234",
     value: 0,
-    transactions: [{ title: "Setup account", date: "2021-06-10", value: 0 }],
+    transactions: [
+      { id: "3", title: "Setup account", date: "2021-06-10", value: 0 },
+    ],
   },
 ];

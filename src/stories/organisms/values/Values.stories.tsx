@@ -22,16 +22,19 @@ Default.args = {
   title: "Values",
   values: [
     {
+      id: "1",
       title: "Coffee Shops",
       text: "1000",
       value: 900,
     },
     {
+      id: "2",
       title: "Groceries",
       text: "1000",
       value: 700,
     },
     {
+      id: "3",
       title: "Restaurants",
       text: "3000",
       value: 100,
@@ -46,16 +49,19 @@ Selected.args = {
   title: "Values",
   values: [
     {
+      id: "4",
       title: "Coffee Shops",
       text: "1000",
       value: 900,
     },
     {
+      id: "5",
       title: "Groceries",
       text: "1000",
       value: 700,
     },
     {
+      id: "6",
       title: "Restaurants",
       text: "3000",
       value: 100,

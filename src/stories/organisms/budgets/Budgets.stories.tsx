@@ -18,16 +18,19 @@ Default.args = {
   title: "Budgets",
   budgets: [
     {
+      id: "1",
       title: "Coffee Shops",
       budget: 1000,
       value: 900,
     },
     {
+      id: "2",
       title: "Groceries",
       budget: 1000,
       value: 700,
     },
     {
+      id: "3",
       title: "Restaurants",
       budget: 3000,
       value: 100,

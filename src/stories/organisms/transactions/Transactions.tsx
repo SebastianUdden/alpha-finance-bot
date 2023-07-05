@@ -3,13 +3,13 @@ import Transaction, {
   TransactionProps,
 } from "../../molecules/transaction/Transaction";
 
-export interface TransactionsProps {
+export interface ITransactions {
   showLarge?: boolean;
   title?: string;
   values: TransactionProps[];
 }
 
-interface Props extends TransactionsProps {
+interface Props extends ITransactions {
   selected?: TransactionProps;
   onShowPage?: (title?: string) => void;
   onSelect?: (value: TransactionProps) => void;
